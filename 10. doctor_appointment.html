@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+</head>
+<body>
+    <p><h1><center>Doctor Appointment Form</center></h1></p>
+    <hr> 
+    <form>
+        <tr>
+            <td>
+                Appointment Date
+            </td>
+            <td>
+                <input type="date">
+            </td>
+        </tr>
+        <br>
+        <br>
+        <tr>
+            <td>
+                Appointment Time
+            </td>
+            <td>
+                <input type="time">
+            </td>
+        </tr>
+        <br>
+        <br>
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>
+               <input type="text" placeholder=  "First">
+            </td>
+            <td>
+                <input type="text" placeholder="Last">
+            </td>
+        </tr>
+        <br>
+        <br>
+        <tr>
+            <td>
+               Gender
+            </td>
+            <td>
+                <lable for ="101">
+                    <input type ="radio" value ="male"name="gender" id="101"> male
+                    <input type ="radio" value ="Female"name="gender" id="102"> female
+                </lable>
+            </td>
+        </tr>
+        <br>
+        <br>
+        <tr>
+            <td>
+               Phone
+            </td>
+            <td>
+                <input type="Phone" placeholder="####"> 
+            </td>
+        </tr>
+        <br>
+        <br>
+        <tr>
+            <td>
+                Address
+            </td>
+            <td>
+               <input type="City" placeholder=  "City">
+            </td>
+            <td>
+                <input type="State" placeholder="State">
+            </td>
+        </tr>
+        <br>
+        <br>
+        <tr>
+            <td>
+                Your Query
+            </td>
+            <td>
+                <textarea name="Your Query" rows=5>
+                </textarea>
+            </td>
+        </tr>
+        <br>
+        <br>
+        <tr>
+            <td>
+                Appointment Type
+            </td>
+            <td> <pre>   Select which appointment type(s) you require</pre>
+            </td>
+                </tr>
+                <tr>
+                    <label for="Cervix checkup" >
+                        <input type="checkbox" value="Cervix checkup" >Cervix checkup</label>   
+                        <br> 
+                        <label for="Heart checkup" >
+                            <input type="checkbox" value="Heart checkup ">Heart checkup</label> 
+                            <br>
+                            <label for="Eye check-up" >
+                                <input type="checkbox" value="Eye check-up ">Eye check-up</label> 
+                                <br>   
+                                <label for="Hearing Test" >
+                                    <input type="checkbox" value="Hearing Test ">Hearing Test</label>    
+                                    <br>
+                                   <button>Send</button>
+                </tr>
+    </form>
+</body>
+</html>

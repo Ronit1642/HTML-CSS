@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>roni</title>
+</head>
+<style>
+    #content {
+  display: none;
+}
+
+
+</style>
+<body>
+    <br>
+    <input type="text" id="textInput" placeholder="Enter paragraph text"><br>
+<button id="showBtn" >SHOW</button>
+<button id="hideBtn">HIDE</button>
+<p id="content"></p><br>
+
+    <script>
+        const showBtn = document.getElementById("showBtn");
+const hideBtn = document.getElementById("hideBtn");
+const textInput = document.getElementById("textInput");
+const content = document.getElementById("content");
+
+showBtn.addEventListener("click", function() {
+  const inputText = textInput.value;
+  content.textContent = inputText;
+  content.style.display = "block";
+});
+
+hideBtn.addEventListener("click", function() {
+  content.style.display = "none";
+  textInput.value = "";
+});
+    </script>
+</body>
+</html>

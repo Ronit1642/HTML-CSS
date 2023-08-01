@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h3> Time at Vit Bhopal</h3>
+<script>
+    var c=0;
+    function checkEdu()
+    {
+        if (document.edu.platform[0].checked ==true) {
+            c=c+1
+            }
+            else {
+                alert("wrong Answer");
+                document.getElementById("txt").value="Windows"; 
+                } }
+                function display_count()
+                alert(c);
+                </script>
+                </head>
+                <body>
+                    <div id="time"></div>
+                    <form name="edu" >
+                        1. The best computer platform for education is <br>
+                        <input type="radio" name="platform" value="Windows">Windows<br>
+                        <input type="radio" name="platform" value="Apple">Apple <br>
+                        <input type="radio" name="platform" value="Unix">Unix<br>
+                        <input type="button" name="check" value="Check Answer for Question 1"
+                        onclick="checkEdu()">
+                        Correct Answer:<input type="text" id="txt" value=""><br>
+                        <input type="submit" onclick="display_count()"><br><br>
+
+                        2. The best computer platform for education is <br>
+                        <input type="radio" name="platform" value="Windows">Windows<br>
+                        <input type="radio" name="platform" value="Apple">Apple <br>
+                        <input type="radio" name="platform" value="Unix">Unix<br>
+                        <input type="button" name="check" value="Check Answer for Question 1"
+                        onclick="checkEdu()">
+                        Correct Answer:<input type="text" id="txt" value=""><br>
+                        <input type="submit" onclick="display_count()"><br><br>
+
+
+                        3. The best computer platform for education is <br>
+                        <input type="radio" name="platform" value="Windows">Windows<br>
+                        <input type="radio" name="platform" value="Apple">Apple <br>
+                        <input type="radio" name="platform" value="Unix">Unix<br>
+                        <input type="button" name="check" value="Check Answer for Question 1"
+                        onclick="checkEdu()">
+                        Correct Answer:<input type="text" id="txt" value=""><br>
+                        <input type="submit" onclick="display_count()"><br>
+
+
+                        4. The best computer platform for education is <br>
+                        <input type="radio" name="platform" value="Windows">Windows<br>
+                        <input type="radio" name="platform" value="Apple">Apple <br>
+                        <input type="radio" name="platform" value="Unix">Unix<br>
+                        <input type="button" name="check" value="Check Answer for Question 1"
+                        onclick="checkEdu()">
+                        Correct Answer:<input type="text" id="txt" value=""><br>
+                        <input type="submit" onclick="display_count()"><br>
+
+
+                        5. The best computer platform for education is <br>
+                        <input type="radio" name="platform" value="Windows">Windows<br>
+                        <input type="radio" name="platform" value="Apple">Apple <br>
+                        <input type="radio" name="platform" value="Unix">Unix<br>
+                        <input type="button" name="check" value="Check Answer for Question 1"
+                        onclick="checkEdu()">
+                        Correct Answer:<input type="text" id="txt" value=""><br>
+                        <input type="submit" onclick="display_count()"><br>
+                        </form>
+                        <script>
+                          
+                            var today = new Date();
+                            var h = today.getHours();
+                            var m = today.getMinutes();
+                            var s = today.getSeconds();
+                            document.getElementById('time').innerHTML =h + ":" + m + ":" + s;
+                        </script>
+                        
+                </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matrix Transpose</title>
+    <style>
+        .matrix-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .matrix-input {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .matrix-input input {
+            width: 40px;
+            margin-right: 5px;
+        }
+
+        .transpose-btn {
+            margin-top: 10px;
+        }
+
+        .result-container {
+            margin-top: 20px;
+        }
+
+        .result-container table {
+            border-collapse: collapse;
+        }
+
+        .result-container th,
+        .result-container td {
+            padding: 5px;
+            border: 1px solid maroon;
+        }
+    </style>
+</head>
+<body>
+    <div class="matrix-container">
+        <div class="matrix-input">
+            <label>Number of Rows:</label>
+            <input type="number" id="rowInput">
+        </div>
+        <div class="matrix-input">
+            <label>Number of Columns:</label>
+            <input type="number" id="colInput">
+        </div>
+        <button class="transpose-btn" onclick="transposeMatrix()">Transpose</button>
+    </div>
+
+    <div class="result-container">
+        <table id="resultTable"></table>
+    </div>
+    
+    
+    <script>
+        function transposeMatrix() {
+            const rowInput = document.getElementById("rowInput");
+            const colInput = document.getElementById("colInput");
+            const resultTable = document.getElementById("resultTable");
+
+            const numRows = parseInt(rowInput.value);
+            const numCols = parseInt(colInput.value);
+
+            // Clear the result table
+            resultTable.innerHTML = "";
+
+            // Create an empty matrix
+            const matrix = [];
+            for (let i = 0; i < numRows; i++) {
+                matrix[i] = [];
+            }
+
+            // Prompt the user to enter matrix elements
+            for (let i = 0; i < numRows; i++) {
+                for (let j = 0; j < numCols; j++) {
+                    const element = prompt(`Enter element for row ${i + 1}, column ${j + 1}:`);
+                    matrix[i][j] = parseInt(element);
+                }
+            }
+
+            // Calculate the transpose
+            const transpose = [];
+            for (let i = 0; i < numCols; i++) {
+                transpose[i] = [];
+                for (let j = 0; j < numRows; j++) {
+                    transpose[i][j] = matrix[j][i];
+                }
+            }
+
+            // Display the transpose in the result table
+            for (let i = 0; i < numCols; i++) {
+                const row = document.createElement("tr");
+                for (let j = 0; j < numRows; j++) {
+                    const cell = document.createElement("td");
+                    cell.textContent = transpose[i][j];
+                    row.appendChild(cell);
+                }
+                resultTable.appendChild(row);
+            }
+        }
+    </script>
+</body>
+</html>
+
+        
